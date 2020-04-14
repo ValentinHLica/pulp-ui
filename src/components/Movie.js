@@ -128,7 +128,13 @@ export default function Movie(props) {
         if (e.data.data.id !== 0) {
           setloading(false);
           setData({ ...e.data.data });
-          checkBookmark(e.data.data.id);
+
+          const cookies = new Cookies();
+          const token = cookies.get("token");
+
+          if (token) {
+            checkBookmark(e.data.data.id);
+          }
         } else {
           setloading(false);
           setErr(true);

@@ -137,6 +137,10 @@
   .movie-poster .play {
     top: -10%;
   }
+
+  .movie-bookmark {
+    top: -150px;
+  }
 }
 
 @media (max-width: 992px) {

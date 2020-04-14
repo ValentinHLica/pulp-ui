@@ -26,9 +26,11 @@ export default function Search() {
 
           <SearchOptions />
 
-          {value.data.length === 0 ? (
+          {value.data.length === 0 && value.loading !== true ? (
             <div className="explore" onClick={value.searchMovies}>
-              <button>Explore</button>
+              <button>
+                <i className="fas fa-random"></i> Explore
+              </button>
             </div>
           ) : null}
 
@@ -66,6 +68,16 @@ export default function Search() {
                 })
               : null}
           </div>
+
+          {value.data.length !== 0 ? (
+            value.paggination[2] > 20 ? (
+              <Paggination
+                changePage={value.changePage}
+                setPage={value.setPage}
+                paggination={value.paggination}
+              />
+            ) : null
+          ) : null}
         </div>
       )}
     </Consumer>

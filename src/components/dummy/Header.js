@@ -73,7 +73,14 @@ export default function Header() {
               </React.Fragment>
             ) : (
               <React.Fragment>
-                <Link to="/bookmark">Bookmarks</Link>
+                <Link
+                  to="/bookmark"
+                  onClick={() => {
+                    setopen(!open);
+                  }}
+                >
+                  Bookmarks
+                </Link>
                 <Link to="/" onClick={value.logOut}>
                   Log Out
                 </Link>
