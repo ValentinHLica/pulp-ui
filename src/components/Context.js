@@ -15,6 +15,9 @@ export default class Provider extends Component {
       const options = [...this.state.searchOptions];
       options[option] = target;
       this.setState({ searchOptions: options });
+      setTimeout(() => {
+        this.state.searchMovies(null);
+      }, 100);
     },
     paggination: [20, 1, 0],
     changePage: (bool) => {
@@ -81,7 +84,9 @@ export default class Provider extends Component {
     loading: false,
     err: false,
     searchMovies: (e) => {
-      e.preventDefault();
+      if (e === "form") {
+        e.preventDefault();
+      }
 
       this.setState({ data: [], loading: true, paggination: [20, 1, 0] });
 
@@ -116,6 +121,8 @@ export default class Provider extends Component {
     logOut: () => {
       const cookies = new Cookies();
       cookies.remove("token");
+      console.log(cookies.get("token"));
+
       this.setState({ token: false });
     },
   };

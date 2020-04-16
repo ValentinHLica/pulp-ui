@@ -146,6 +146,21 @@ body {
   background-color: #262b2f96;
 }
 
+#modal {
+  animation: modal 0.4s;
+  background-color: transparent;
+}
+
+@keyframes modal {
+  0% {
+    top: -30px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
 .header-bc {
   z-index: 3;
 }
@@ -206,12 +221,19 @@ body {
   max-width: 500px;
   box-shadow: 0px 3px 7px #181a1d;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 #query,
 #form i {
   border: 0;
   background-color: #262b2f8f;
+  transition: background-color.2s;
+}
+
+#form:hover > #query,
+#form:hover > i {
+  background-color: #181a1d;
 }
 
 #query {
@@ -244,6 +266,11 @@ body {
   display: flex;
   align-items: center;
   font-size: 1em;
+  transition: background-color 0.2s;
+}
+
+.explore button:hover {
+  background-color: #181a1d;
 }
 
 .explore button i {
@@ -281,6 +308,12 @@ option {
   margin: 0 40px 0 0;
   width: 150px;
   box-shadow: 0px 3px 7px #181a1d;
+  transition: background-color 0.2s;
+}
+
+.selected:hover {
+  background-color: #181a1d;
+  cursor: pointer;
 }
 
 /* Options  ######### END #########*/
@@ -436,6 +469,11 @@ option {
   margin: auto;
 }
 
+#modal-content iframe,
+#modal-content img {
+  background-color: #0f1113;
+}
+
 /* Movie Page  ######### START #########*/
 
 /* Movie Page 2 ######### START #########*/
@@ -469,8 +507,8 @@ option {
 
 .movie-bookmark i {
   transition: color 0.2s;
-  background: #262b2fb8;
-  box-shadow: 0 0 13px 4px #262b2f;
+  background: #262b2f8c;
+  box-shadow: 0px 0 19px 3px #262b2f;
 }
 
 .movie-bookmark:hover i {
@@ -689,9 +727,15 @@ option {
   padding: 10px 20px;
   border: 0;
   border-radius: 5px;
-  background: #262b2f;
+  background-color: #262b2f;
   width: 100%;
   font-size: 1em;
+  transition: background-color 0.2s;
+}
+
+.user-form input:hover,
+.user-form button:hover {
+  background-color: #181a1d;
 }
 
 .form-error {
@@ -731,6 +775,29 @@ option {
   cursor: pointer;
 }
 
+.password span {
+  display: flex;
+}
+.password span div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  background-color: #262b2f;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-top: 0;
+  transition: background-color 0.2s;
+}
+
+.password span div:hover {
+  cursor: pointer;
+  background-color: #181a1d;
+}
+
+.form-success {
+  background-color: #2e752e !important;
+}
 /* User Login   ######### END #########*/
 
 /* Page not Found */
@@ -738,6 +805,7 @@ option {
   display: flex;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 
 .not-found-img img {

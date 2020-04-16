@@ -8,6 +8,7 @@ export default function Login(props) {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState(false);
+  const [loginSuccess, setLoginSuccess] = useState(false);
 
   const change = (target, e) => {
     if (target === "email") {
@@ -37,7 +38,11 @@ export default function Login(props) {
         setToken(e.data.token);
         const cookies = new Cookies();
         cookies.set("token", e.data.token, { path: "/" });
-        props.history.push("/");
+
+        setLoginSuccess(true);
+        setTimeout(() => {
+          props.history.push("/");
+        }, 1000);
       })
       .catch((e) => {
         setLoading(false);
@@ -84,11 +89,13 @@ export default function Login(props) {
               />
             </div>
 
-            <button>
+            <button className={loginSuccess ? "form-success" : null}>
               {loading ? (
                 <div className="loading">
                   <div className="loader"></div>
                 </div>
+              ) : loginSuccess ? (
+                <i className="fas fa-check"></i>
               ) : (
                 "Login"
               )}

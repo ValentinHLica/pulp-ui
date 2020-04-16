@@ -14,13 +14,14 @@ export default function Search() {
             <i className="fas fa-film"></i> <span>Pulp</span> Stream
           </h1>
 
-          <form id="form" onSubmit={value.searchMovies}>
+          <form id="form" onSubmit={value.searchMovies.bind(this, "form")}>
             <i className="fas fa-search"></i>
             <input
               type="text"
               id="query"
               placeholder="Search..."
               onChange={value.changeQuery}
+              value={value.query}
             />
           </form>
 
