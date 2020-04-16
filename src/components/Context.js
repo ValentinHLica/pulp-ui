@@ -16,7 +16,7 @@ export default class Provider extends Component {
       options[option] = target;
       this.setState({ searchOptions: options });
       setTimeout(() => {
-        this.state.searchMovies(null);
+        this.state.searchMovies(null, null);
       }, 100);
     },
     paggination: [20, 1, 0],
@@ -83,9 +83,9 @@ export default class Provider extends Component {
     },
     loading: false,
     err: false,
-    searchMovies: (e) => {
-      if (e === "form") {
-        e.preventDefault();
+    searchMovies: (type, form) => {
+      if (type === "form") {
+        form.preventDefault();
       }
 
       this.setState({ data: [], loading: true, paggination: [20, 1, 0] });
