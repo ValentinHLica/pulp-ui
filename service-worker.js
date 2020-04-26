@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/pulp-ui/precache-manifest.498d0b2e10d39d47d742ffa5698f6e9f.js"
+  "/pulp-ui/precache-manifest.5dea121600a360afbce0974114276c3e.js"
 );
 
 self.addEventListener('message', (event) => {
