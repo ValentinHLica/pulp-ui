@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Cookies from "universal-cookie";
-import { Consumer } from "./Context";
+import { Consumer } from "../Context";
 import jwt from "jsonwebtoken";
 
 export default function Movie(props) {

@@ -1,9 +1,9 @@
 import React from "react";
-import { Consumer } from "./Context";
+import { Consumer } from "../Context";
 
-import Card from "./dummy/Card";
-import SearchOptions from "./dummy/SearchOptions";
-import Paggination from "./dummy/Paggination";
+import Card from "./Card";
+import SearchOptions from "./SearchOptions";
+import Paggination from "./Paggination";
 
 export default function Search() {
   return (

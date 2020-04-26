@@ -3,12 +3,12 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Provider from "./components/Context";
 
 // Dummy
-import Header from "./components/dummy/Header";
-import NotFound from "./components/dummy/NotFound";
+import Header from "./components/Other/Header";
+import NotFound from "./components/Other/NotFound";
 
 // Main
-import Search from "./components/Search";
-import Movie from "./components/Movie";
+import Search from "./components/Search/Main";
+import Movie from "./components/Movie/Main";
 
 // User
 import Login from "./components/User/Login";

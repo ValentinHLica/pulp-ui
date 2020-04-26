@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Cookies from "universal-cookie";
 
-import Card from "../dummy/Card";
-import Paggination from "../dummy/Paggination";
+import Card from "../Search/Card";
+import Paggination from "./Paggination";
 
 export default function Bookmarks(props) {
   const [data, setData] = useState([]);
