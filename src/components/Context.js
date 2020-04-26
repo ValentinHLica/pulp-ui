@@ -122,7 +122,8 @@ export default class Provider extends Component {
       this.setState({ token: false });
       const cookies = new Cookies();
       cookies.remove("token", {
-        path: "https://bashvtini.github.io/pulp-ui/#/",
+        path: "/",
+        domain: "https://bashvtini.github.io/pulp-ui/",
       });
     },
   };
