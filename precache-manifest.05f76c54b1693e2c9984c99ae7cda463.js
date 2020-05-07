@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "87db2179b25ad17aaca66cb4e2a599c4",
+    "revision": "293627215d9f040918b5f167742b810c",
     "url": "/pulp-ui/index.html"
   },
   {
-    "revision": "9e386b88d310c01f1499",
-    "url": "/pulp-ui/static/css/main.716af566.chunk.css"
+    "revision": "8bbd1c26e5a6ab996f84",
+    "url": "/pulp-ui/static/css/main.39979b92.chunk.css"
   },
   {
-    "revision": "8b38dbc57f326aa60955",
-    "url": "/pulp-ui/static/js/2.43217135.chunk.js"
+    "revision": "3e95fbcc66d7d6b1b480",
+    "url": "/pulp-ui/static/js/2.19a33cbe.chunk.js"
   },
   {
     "revision": "b5a9f0302cb1f13b821c56bbb8320f46",
-    "url": "/pulp-ui/static/js/2.43217135.chunk.js.LICENSE.txt"
+    "url": "/pulp-ui/static/js/2.19a33cbe.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9e386b88d310c01f1499",
-    "url": "/pulp-ui/static/js/main.9f258b79.chunk.js"
+    "revision": "8bbd1c26e5a6ab996f84",
+    "url": "/pulp-ui/static/js/main.d557fbb2.chunk.js"
   },
   {
     "revision": "0127c23715754238fd79",
