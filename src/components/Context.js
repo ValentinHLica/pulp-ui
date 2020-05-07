@@ -88,7 +88,12 @@ export default class Provider extends Component {
         form.preventDefault();
       }
 
-      this.setState({ data: [], loading: true, paggination: [20, 1, 0] });
+      this.setState({
+        data: [],
+        loading: true,
+        err: false,
+        paggination: [20, 1, 0],
+      });
 
       const options = this.state.searchOptions;
       const query = this.state.query;

@@ -27,7 +27,7 @@ export default function Search() {
 
           <SearchOptions />
 
-          {value.data.length === 0 && value.loading !== true ? (
+          {value.data.length === 0 && !value.loading && !value.err ? (
             <div className="explore" onClick={value.searchMovies}>
               <button>
                 <i className="fas fa-random"></i> Explore

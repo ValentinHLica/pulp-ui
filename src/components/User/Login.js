@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Cookies from "universal-cookie";
 import { Consumer } from "../Context";
+import { Link } from "react-router-dom";
 
 export default function Login(props) {
   const [email, setEmail] = useState("");
@@ -100,6 +101,10 @@ export default function Login(props) {
                 "Login"
               )}
             </button>
+
+            <div className="forgot-password-message">
+              <Link to="/forgotpassword">Forgot Password</Link>
+            </div>
           </form>
         </div>
       )}

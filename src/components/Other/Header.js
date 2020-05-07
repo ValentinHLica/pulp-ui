@@ -23,6 +23,9 @@ export default function Header() {
                   </React.Fragment>
                 ) : (
                   <React.Fragment>
+                    <Link to="/user" className="account">
+                      <i className="fas fa-user"></i> User
+                    </Link>
                     <Link to="/bookmark">Bookmarks</Link>
                     <Link to="/" onClick={value.logOut}>
                       Log Out
