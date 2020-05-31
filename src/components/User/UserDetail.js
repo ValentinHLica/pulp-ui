@@ -19,7 +19,7 @@ export default function UserDetail(props) {
       props.history.push("/");
     } else {
       axios
-        .get(`http://localhost:5000/auth/user`, {
+        .get(`https://pulp-stream.herokuapp.com/auth/user`, {
           headers: {
             "Content-Type": "application/json",
             Authorization: "Bearer " + token,
@@ -47,7 +47,7 @@ export default function UserDetail(props) {
 
     axios
       .put(
-        "http://localhost:5000/auth/user/detail",
+        "https://pulp-stream.herokuapp.com/auth/user/detail",
         {
           username,
           email,

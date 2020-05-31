@@ -36,7 +36,7 @@ export default function ChangePassword(props) {
 
     axios
       .put(
-        "http://localhost:5000/auth/changepassword",
+        "https://pulp-stream.herokuapp.com/auth/changepassword",
         {
           currentPassword,
           newPassword,
