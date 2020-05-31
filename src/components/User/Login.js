@@ -25,7 +25,7 @@ export default function Login(props) {
     setLoading(true);
     axios
       .post(
-        "https://pulp-stream.herokuapp.com/auth/login",
+        "http://localhost:5000/auth/login",
         {
           email,
           password,

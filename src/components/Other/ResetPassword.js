@@ -7,7 +7,7 @@ export default function ResetPassword(props) {
   const [newPassword, setNewPassword] = useState("");
   const [repeatNewPassword, setrepeatNewPassword] = useState("");
 
-  const [invalideToken, setinvalideToken] = useState(true);
+  const [invalideToken, setinvalideToken] = useState("checking");
 
   const [loading, setLoading] = useState(false);
   const [pageLoading, setPageLoading] = useState(true);
@@ -18,20 +18,19 @@ export default function ResetPassword(props) {
   useEffect(() => {
     axios
       .get(
-        `https://pulp-stream.herokuapp.com/auth/checkresetpassword/${props.match.params.token}`
+        `http://localhost:5000/auth/checkresetpassword/${props.match.params.token}`
       )
       .then((e) => {
         setPageLoading(false);
-        setinvalideToken(false);
+        setinvalideToken("valid");
       })
       .catch((e) => {
         setPageLoading(false);
+        setinvalideToken("invalid");
       });
 
     // eslint-disable-next-line
   }, []);
-
-  //sadasdasdas
 
   const submit = (setToken, form) => {
     form.preventDefault();
@@ -42,7 +41,7 @@ export default function ResetPassword(props) {
     if (newPassword === repeatNewPassword) {
       axios
         .put(
-          `https://pulp-stream.herokuapp.com/auth/resetpassword/${props.match.params.token}`,
+          `http://localhost:5000/auth/resetpassword/${props.match.params.token}`,
           {
             password: newPassword,
           },
@@ -76,7 +75,7 @@ export default function ResetPassword(props) {
     <Consumer>
       {(value) => (
         <div className="continer wrapper">
-          {!invalideToken ? (
+          {invalideToken === "valid" ? (
             <form
               className="user-form"
               onSubmit={submit.bind(this, value.setToken)}
@@ -142,7 +141,7 @@ export default function ResetPassword(props) {
             </div>
           ) : null}
 
-          {invalideToken ? (
+          {invalideToken === "invalid" ? (
             <h1 className="invalide-token">Invalide Token</h1>
           ) : null}
         </div>

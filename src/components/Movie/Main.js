@@ -52,7 +52,7 @@ export default function Movie(props) {
     if (!bookmarked) {
       axios
         .post(
-          "https://pulp-stream.herokuapp.com/bookmark",
+          "http://localhost:5000/bookmark",
           {
             movieCode: data.id,
             title: data.title,
@@ -78,7 +78,7 @@ export default function Movie(props) {
     } else {
       axios
         .post(
-          "https://pulp-stream.herokuapp.com/bookmark/delete",
+          "http://localhost:5000/bookmark/delete",
           {
             movieCode: data.id,
           },
@@ -101,7 +101,7 @@ export default function Movie(props) {
 
     axios
       .post(
-        "https://pulp-stream.herokuapp.com/bookmark/check",
+        "http://localhost:5000/bookmark/check",
         {
           movieCode: id,
         },
@@ -123,7 +123,7 @@ export default function Movie(props) {
     setData([]);
     setloading(true);
     axios
-      .get(`https://pulp-stream.herokuapp.com/movie/${props.match.params.id}`)
+      .get(`http://localhost:5000/movie/${props.match.params.id}`)
       .then((e) => {
         if (e.data.data.id !== 0) {
           setloading(false);
@@ -255,7 +255,9 @@ export default function Movie(props) {
                     <p>{data.rating}</p>
                   </div>
                   <ul className="more">
-                    <li>{data.runtime}</li>
+                    {data.runtime !== 0 ? (
+                      <li>{data.runtime + " min"}</li>
+                    ) : null}
                     <li>{data.genres.join(", ")}</li>
                     <li>{data.year}</li>
                     <li>{data.language}</li>

@@ -15,7 +15,7 @@ export default function ForgotPassword() {
 
     axios
       .post(
-        "https://pulp-stream.herokuapp.com/auth/forgotpassword",
+        "http://localhost:5000/auth/forgotpassword",
         {
           email,
         },

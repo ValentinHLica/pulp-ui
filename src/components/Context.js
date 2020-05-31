@@ -39,7 +39,7 @@ export default class Provider extends Component {
       const query = this.state.query;
       axios
         .get(
-          `https://pulp-stream.herokuapp.com/search?query=${query}&limit=${paggination[0]}&page=${paggination[1]}&quality=${options[0]}&genre=${options[1]}&rating=${options[2]}&sort=${options[3]}`
+          `http://localhost:5000/search?query=${query}&limit=${paggination[0]}&page=${paggination[1]}&quality=${options[0]}&genre=${options[1]}&rating=${options[2]}&sort=${options[3]}`
         )
         .then((e) => {
           this.setState({
@@ -64,7 +64,7 @@ export default class Provider extends Component {
       const query = this.state.query;
       axios
         .get(
-          `https://pulp-stream.herokuapp.com/search?query=${query}&limit=${paggination[0]}&page=${paggination[1]}&quality=${options[0]}&genre=${options[1]}&rating=${options[2]}&sort=${options[3]}`
+          `http://localhost:5000/search?query=${query}&limit=${paggination[0]}&page=${paggination[1]}&quality=${options[0]}&genre=${options[1]}&rating=${options[2]}&sort=${options[3]}`
         )
         .then((e) => {
           this.setState({
@@ -101,7 +101,7 @@ export default class Provider extends Component {
 
       axios
         .get(
-          `https://pulp-stream.herokuapp.com/search?query=${query}&limit=${paggination[0]}&page=${paggination[1]}&quality=${options[0]}&genre=${options[1]}&rating=${options[2]}&sort=${options[3]}`
+          `http://localhost:5000/search?query=${query}&limit=${paggination[0]}&page=${paggination[1]}&quality=${options[0]}&genre=${options[1]}&rating=${options[2]}&sort=${options[3]}`
         )
         .then((e) => {
           paggination[2] = e.data.paggination.count;

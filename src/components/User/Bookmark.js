@@ -31,15 +31,12 @@ export default function Bookmarks(props) {
     setLoading(true);
 
     axios
-      .get(
-        `https://pulp-stream.herokuapp.com/bookmark?page=${pagginations[1]}`,
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      )
+      .get(`http://localhost:5000/bookmark?page=${pagginations[1]}`, {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      })
       .then((e) => {
         setLoading(false);
         setData(e.data.data);
@@ -60,15 +57,12 @@ export default function Bookmarks(props) {
     pagginations[1] = e;
 
     axios
-      .get(
-        `https://pulp-stream.herokuapp.com/bookmark?page=${pagginations[1]}`,
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      )
+      .get(`http://localhost:5000/bookmark?page=${pagginations[1]}`, {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      })
       .then((e) => {
         setData(e.data.data);
         setLoading(false);
@@ -92,7 +86,7 @@ export default function Bookmarks(props) {
     setLoading(true);
 
     axios
-      .get("https://pulp-stream.herokuapp.com/bookmark?page=1", {
+      .get("http://localhost:5000/bookmark?page=1", {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
