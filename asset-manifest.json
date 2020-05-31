@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/pulp-ui/static/css/main.39979b92.chunk.css",
-    "main.js": "/pulp-ui/static/js/main.528ddf80.chunk.js",
-    "main.js.map": "/pulp-ui/static/js/main.528ddf80.chunk.js.map",
+    "main.js": "/pulp-ui/static/js/main.d6ffaafa.chunk.js",
+    "main.js.map": "/pulp-ui/static/js/main.d6ffaafa.chunk.js.map",
     "runtime-main.js": "/pulp-ui/static/js/runtime-main.08557e16.js",
     "runtime-main.js.map": "/pulp-ui/static/js/runtime-main.08557e16.js.map",
     "static/js/2.19a33cbe.chunk.js": "/pulp-ui/static/js/2.19a33cbe.chunk.js",
     "static/js/2.19a33cbe.chunk.js.map": "/pulp-ui/static/js/2.19a33cbe.chunk.js.map",
     "index.html": "/pulp-ui/index.html",
-    "precache-manifest.f5afcdea700ab83c4a4b35b06d38d715.js": "/pulp-ui/precache-manifest.f5afcdea700ab83c4a4b35b06d38d715.js",
+    "precache-manifest.e9ec6dc6e37f73f3fc7259410cea43e6.js": "/pulp-ui/precache-manifest.e9ec6dc6e37f73f3fc7259410cea43e6.js",
     "service-worker.js": "/pulp-ui/service-worker.js",
     "static/css/main.39979b92.chunk.css.map": "/pulp-ui/static/css/main.39979b92.chunk.css.map",
     "static/js/2.19a33cbe.chunk.js.LICENSE.txt": "/pulp-ui/static/js/2.19a33cbe.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.08557e16.js",
     "static/js/2.19a33cbe.chunk.js",
     "static/css/main.39979b92.chunk.css",
-    "static/js/main.528ddf80.chunk.js"
+    "static/js/main.d6ffaafa.chunk.js"
   ]
 }
