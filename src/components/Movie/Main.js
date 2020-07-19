@@ -3,6 +3,7 @@ import axios from "axios";
 import Cookies from "universal-cookie";
 import { Consumer } from "../Context";
 import jwt from "jsonwebtoken";
+import PosterError from "../assets/img/PosterError.png";
 
 export default function Movie(props) {
   const [data, setData] = useState({});
@@ -119,6 +120,10 @@ export default function Movie(props) {
       });
   };
 
+  const errors = (e) => {
+    e.target.src = PosterError;
+  };
+
   useEffect(() => {
     setData([]);
     setloading(true);
@@ -146,6 +151,7 @@ export default function Movie(props) {
       });
     // eslint-disable-next-line
   }, []);
+
   return (
     <Consumer>
       {(value) => (
@@ -199,7 +205,11 @@ export default function Movie(props) {
           {data.id ? (
             <div className="movie">
               <div className="movie-cover">
-                <img src={data.background_image} alt="Movie Poster" />
+                <img
+                  src={data.background_image}
+                  alt="Movie Poster"
+                  onError={errors.bind(this)}
+                />
                 <div
                   className="play cover-play"
                   onClick={modalSwitch.bind(this, data.stream, "iframe")}
@@ -228,7 +238,11 @@ export default function Movie(props) {
 
               <div className="movie-detail">
                 <div className="movie-poster">
-                  <img src={data.medium_cover_image} alt="Movie Cover" />
+                  <img
+                    src={data.medium_cover_image}
+                    alt="Movie Cover"
+                    onError={errors.bind(this)}
+                  />
                   {value.token ? (
                     <div
                       className={`movie-bookmark ${
@@ -258,7 +272,7 @@ export default function Movie(props) {
                     {data.runtime !== 0 ? (
                       <li>{data.runtime + " min"}</li>
                     ) : null}
-                    <li>{data.genres.join(", ")}</li>
+                    <li>{data.genres ? data.genres.join(", ") : ""}</li>
                     <li>{data.year}</li>
                     <li>{data.language}</li>
                   </ul>
