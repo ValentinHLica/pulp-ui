@@ -1,23 +1,24 @@
 {
   "files": {
     "main.css": "/pulp-ui/static/css/main.39979b92.chunk.css",
-    "main.js": "/pulp-ui/static/js/main.d6ffaafa.chunk.js",
-    "main.js.map": "/pulp-ui/static/js/main.d6ffaafa.chunk.js.map",
+    "main.js": "/pulp-ui/static/js/main.9420a793.chunk.js",
+    "main.js.map": "/pulp-ui/static/js/main.9420a793.chunk.js.map",
     "runtime-main.js": "/pulp-ui/static/js/runtime-main.08557e16.js",
     "runtime-main.js.map": "/pulp-ui/static/js/runtime-main.08557e16.js.map",
-    "static/js/2.19a33cbe.chunk.js": "/pulp-ui/static/js/2.19a33cbe.chunk.js",
-    "static/js/2.19a33cbe.chunk.js.map": "/pulp-ui/static/js/2.19a33cbe.chunk.js.map",
+    "static/js/2.56f7d20e.chunk.js": "/pulp-ui/static/js/2.56f7d20e.chunk.js",
+    "static/js/2.56f7d20e.chunk.js.map": "/pulp-ui/static/js/2.56f7d20e.chunk.js.map",
     "index.html": "/pulp-ui/index.html",
-    "precache-manifest.e9ec6dc6e37f73f3fc7259410cea43e6.js": "/pulp-ui/precache-manifest.e9ec6dc6e37f73f3fc7259410cea43e6.js",
+    "precache-manifest.1796e0c16535b1b7fb7d070516669b63.js": "/pulp-ui/precache-manifest.1796e0c16535b1b7fb7d070516669b63.js",
     "service-worker.js": "/pulp-ui/service-worker.js",
     "static/css/main.39979b92.chunk.css.map": "/pulp-ui/static/css/main.39979b92.chunk.css.map",
-    "static/js/2.19a33cbe.chunk.js.LICENSE.txt": "/pulp-ui/static/js/2.19a33cbe.chunk.js.LICENSE.txt",
+    "static/js/2.56f7d20e.chunk.js.LICENSE.txt": "/pulp-ui/static/js/2.56f7d20e.chunk.js.LICENSE.txt",
+    "static/media/PosterError.png": "/pulp-ui/static/media/PosterError.3125284f.png",
     "static/media/notFound.gif": "/pulp-ui/static/media/notFound.a6027643.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.08557e16.js",
-    "static/js/2.19a33cbe.chunk.js",
+    "static/js/2.56f7d20e.chunk.js",
     "static/css/main.39979b92.chunk.css",
-    "static/js/main.d6ffaafa.chunk.js"
+    "static/js/main.9420a793.chunk.js"
   ]
 }
