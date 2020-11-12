@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "314edf2eefa370613b9f1de557d8bf3f",
+    "revision": "d825bc9a20a2d7bad83286b2cde7aea4",
     "url": "/pulp-ui/index.html"
   },
   {
-    "revision": "1480e787bafcf1185d82",
+    "revision": "c8bb91b930a971564087",
     "url": "/pulp-ui/static/css/main.55fdb3f7.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pulp-ui/static/js/2.56f7d20e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1480e787bafcf1185d82",
-    "url": "/pulp-ui/static/js/main.9420a793.chunk.js"
+    "revision": "c8bb91b930a971564087",
+    "url": "/pulp-ui/static/js/main.fb073d42.chunk.js"
   },
   {
     "revision": "0127c23715754238fd79",
