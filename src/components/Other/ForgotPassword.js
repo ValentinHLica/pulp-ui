@@ -15,7 +15,7 @@ export default function ForgotPassword() {
 
     axios
       .post(
-        "https://portfolio-server-vl.herokuapp.com/auth/forgotpassword",
+        "https://portfolio-server-vl.herokuapp.com/pulp/auth/forgotpassword",
         {
           email,
         },

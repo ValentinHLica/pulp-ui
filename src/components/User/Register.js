@@ -17,7 +17,7 @@ export default function Login(props) {
     setLoading(true);
     axios
       .post(
-        "https://portfolio-server-vl.herokuapp.com/auth/register",
+        "https://portfolio-server-vl.herokuapp.com/pulp/auth/register",
         {
           username,
           email,

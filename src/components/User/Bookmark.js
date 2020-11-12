@@ -32,7 +32,7 @@ export default function Bookmarks(props) {
 
     axios
       .get(
-        `https://portfolio-server-vl.herokuapp.com/bookmark?page=${pagginations[1]}`,
+        `https://portfolio-server-vl.herokuapp.com/pulp/bookmark?page=${pagginations[1]}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -61,7 +61,7 @@ export default function Bookmarks(props) {
 
     axios
       .get(
-        `https://portfolio-server-vl.herokuapp.com/bookmark?page=${pagginations[1]}`,
+        `https://portfolio-server-vl.herokuapp.com/pulp/bookmark?page=${pagginations[1]}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -92,7 +92,7 @@ export default function Bookmarks(props) {
     setLoading(true);
 
     axios
-      .get("https://portfolio-server-vl.herokuapp.com/bookmark?page=1", {
+      .get("https://portfolio-server-vl.herokuapp.com/pulp/bookmark?page=1", {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
