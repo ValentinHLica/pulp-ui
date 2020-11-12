@@ -53,7 +53,7 @@ export default function Movie(props) {
     if (!bookmarked) {
       axios
         .post(
-          "https://pulp-stream.herokuapp.com/bookmark",
+          "https://portfolio-server-vl.herokuapp.com/bookmark",
           {
             movieCode: data.id,
             title: data.title,
@@ -79,7 +79,7 @@ export default function Movie(props) {
     } else {
       axios
         .post(
-          "https://pulp-stream.herokuapp.com/bookmark/delete",
+          "https://portfolio-server-vl.herokuapp.com/bookmark/delete",
           {
             movieCode: data.id,
           },
@@ -102,7 +102,7 @@ export default function Movie(props) {
 
     axios
       .post(
-        "https://pulp-stream.herokuapp.com/bookmark/check",
+        "https://portfolio-server-vl.herokuapp.com/bookmark/check",
         {
           movieCode: id,
         },
@@ -128,7 +128,9 @@ export default function Movie(props) {
     setData([]);
     setloading(true);
     axios
-      .get(`https://pulp-stream.herokuapp.com/movie/${props.match.params.id}`)
+      .get(
+        `https://portfolio-server-vl.herokuapp.com/movie/${props.match.params.id}`
+      )
       .then((e) => {
         if (e.data.data.id !== 0) {
           setloading(false);

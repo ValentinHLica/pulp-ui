@@ -18,7 +18,7 @@ export default function ResetPassword(props) {
   useEffect(() => {
     axios
       .get(
-        `https://pulp-stream.herokuapp.com/auth/checkresetpassword/${props.match.params.token}`
+        `https://portfolio-server-vl.herokuapp.com/auth/checkresetpassword/${props.match.params.token}`
       )
       .then((e) => {
         setPageLoading(false);
@@ -41,7 +41,7 @@ export default function ResetPassword(props) {
     if (newPassword === repeatNewPassword) {
       axios
         .put(
-          `https://pulp-stream.herokuapp.com/auth/resetpassword/${props.match.params.token}`,
+          `https://portfolio-server-vl.herokuapp.com/auth/resetpassword/${props.match.params.token}`,
           {
             password: newPassword,
           },
